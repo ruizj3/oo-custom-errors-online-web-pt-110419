@@ -13,9 +13,11 @@ class Person
        person.partner = self
      end
    end
-  class PartnerError < StandardError
-  end
-end
+   class PartnerError < StandardError
+     def message
+       "you must give the get_married method an argument of an instance of the person class!"
+     end
+   end
 
 beyonce = Person.new("Beyonce")
 beyonce.get_married("Jay-Z")
